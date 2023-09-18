@@ -153,7 +153,7 @@ Attribute VB_Exposed = False
 Dim C As String, S As String
 
 Private Sub Check1_Click()
-If Check1.value = 1 Then
+If Check1.Value = 1 Then
 Text2.PasswordChar = ""
 Text2.Text = Text2.Text
 Check1.Caption = "Hide Password"
