@@ -127,10 +127,10 @@ End Sub
 
 Private Sub Timer1_Timer()
 ProgressBar1.Visible = True
-ProgressBar1.value = ProgressBar1.value + randomNumber
+ProgressBar1.Value = ProgressBar1.Value + 4
 Label3.Visible = True
-Label4.Caption = ProgressBar1.value & "%"
-If ProgressBar1.value = ProgressBar1.Max Then
+Label4.Caption = ProgressBar1.Value & "%"
+If ProgressBar1.Value = ProgressBar1.Max Then
 'ProgressBar1.value = 100
 Timer1.Enabled = False
 Login1.Show
