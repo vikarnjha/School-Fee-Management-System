@@ -106,6 +106,24 @@ Begin VB.Form Login1
       Top             =   1920
       Width           =   3723
    End
+   Begin VB.Label Label3 
+      BackStyle       =   0  'Transparent
+      Caption         =   "Login"
+      BeginProperty Font 
+         Name            =   "Segoe Print"
+         Size            =   24
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   855
+      Left            =   6480
+      TabIndex        =   7
+      Top             =   480
+      Width           =   3255
+   End
    Begin VB.Label Label2 
       Alignment       =   2  'Center
       BackStyle       =   0  'Transparent
@@ -178,6 +196,19 @@ End Sub
 
 
 Private Sub Command1_Click()
+If Text1.Text = "" And Text2.Text <> "" Then
+MsgBox "Enter the Username"
+Text1.SetFocus
+End If
+
+If Text1.Text <> "" And Text2.Text = "" Then
+MsgBox "Enter the Password"
+Text2.SetFocus
+End If
+
+If Text1.Text = "" And Text2.Text = "" Then
+MsgBox "Enter username and password"
+End If
 If Text1.Text = "PRJ2333E" And Text2.Text = "PRJ2333E" Then
 MsgBox "Login Successfully"
 SFMG.Show
