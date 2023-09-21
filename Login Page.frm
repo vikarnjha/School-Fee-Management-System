@@ -67,7 +67,7 @@ Begin VB.Form Login1
          Strikethrough   =   0   'False
       EndProperty
       Height          =   698
-      Left            =   7413
+      Left            =   8160
       MaskColor       =   &H00FFFFC0&
       Style           =   1  'Graphical
       TabIndex        =   4
@@ -108,7 +108,7 @@ Begin VB.Form Login1
    End
    Begin VB.Label Label3 
       BackStyle       =   0  'Transparent
-      Caption         =   "Login"
+      Caption         =   "Login Page"
       BeginProperty Font 
          Name            =   "Segoe Print"
          Size            =   24
@@ -119,7 +119,7 @@ Begin VB.Form Login1
          Strikethrough   =   0   'False
       EndProperty
       Height          =   855
-      Left            =   6480
+      Left            =   8160
       TabIndex        =   7
       Top             =   480
       Width           =   3255
@@ -196,20 +196,18 @@ End Sub
 
 
 Private Sub Command1_Click()
-If Text1.Text = "" And Text2.Text <> "" Then
+If Text1.Text = "" Then
 MsgBox "Enter the Username"
 Text1.SetFocus
-End If
 
-If Text1.Text <> "" And Text2.Text = "" Then
+ElseIf Text2.Text = "" Then
 MsgBox "Enter the Password"
 Text2.SetFocus
-End If
 
-If Text1.Text = "" And Text2.Text = "" Then
-MsgBox "Enter username and password"
-End If
-If Text1.Text = "PRJ2333E" And Text2.Text = "PRJ2333E" Then
+ElseIf Text1.Text = "" And Text2.Text = "" Then
+MsgBox "Enter Username and Password"
+
+ElseIf Text1.Text = "PRJ2333E" And Text2.Text = "PRJ2333E" Then
 MsgBox "Login Successfully"
 SFMG.Show
 Unload Me
@@ -218,30 +216,26 @@ Else
 Text1.Text = ""
 Text2.Text = ""
 Text1.SetFocus
-Command2.Caption = "Show Password"
 MsgBox "Wrong Username or Password"
 End If
-
-
-
 End Sub
 
 Private Sub Command2_Click()
 
 
-C = (InputBox("What is your school Id"))
+Id = (InputBox("Enter your School Id"))
 
-If (C = "PR001") Then
-S = (InputBox("What is your unique number"))
-If (S = "P12345678") Then
+If (Id = "1") Then
+Y = (InputBox("Enter your School Registration year"))
+If (Y = "2021") Then
 MsgBox "Login Successfully"
-End If
 SFMG.Show
 Unload Me
 
 Else
-MsgBox " Wrong Password Contact to Techinical Team"
+MsgBox " Wrong details Contact the Techinical Team"
 Text1.SetFocus
+End If
 End If
 End Sub
 

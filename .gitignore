@@ -89,14 +89,14 @@ StyleCopReport.xml
 *.tmp
 *.tmp_proj
 *_wpftmp.csproj
-*.log
+# *.log
 *.tlog
 *.vspscc
 *.vssscc
 .builds
 *.pidb
 *.svclog
-*.scc
+# *.scc
 
 # Chutzpah Test files
 _Chutzpah*
@@ -292,7 +292,7 @@ node_modules/
 *.opt
 
 # Visual Studio 6 auto-generated workspace file (contains which files were open etc.)
-*.vbw
+# *.vbw
 
 # Visual Studio 6 auto-generated project file (contains which files were open etc.)
 # *.vbp
