@@ -88,3 +88,4 @@ Private Sub Text2_LostFocus()
 Text2.Text = UCase(Text2.Text)
 
 End Sub
+
