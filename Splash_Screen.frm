@@ -1,5 +1,5 @@
 VERSION 5.00
-Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCTL.OCX"
+Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.1#0"; "mscomctl.ocx"
 Begin VB.Form Schoolfee 
    Caption         =   "School Fee Management System"
    ClientHeight    =   10095
@@ -132,7 +132,7 @@ Label4.Caption = ProgressBar1.Value & "%"
 If ProgressBar1.Value = ProgressBar1.Max Then
 'ProgressBar1.value = 100
 Timer1.Enabled = False
-Login1.Show
+Login.Show
 Unload Me
 End If
 End Sub

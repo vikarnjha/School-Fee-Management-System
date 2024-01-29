@@ -1,0 +1,28 @@
+
+
+create table Student(
+   Regid varchar2(20) primary key,
+    Class varchar2(10) not null,
+    section char(1) not null,
+    Roll Number(3) not null,
+    Sname Varchar2(20) not null,
+    Fname Varchar2(20) not null,
+    Fmob Varchar2(13) not null,
+    Fquali Varchar2(20) not null,
+   Foccup varchar2(20) not null,
+   Mname varchar2(20) not null,
+   Mmob varchar2(13) not null,
+   Mquali varchar2(20) not null,
+   Moccup varchar2(20) not null,
+   Dob date,
+   Gname varchar2(20) null,
+   GSR varchar2(20) null,
+   Gmob varchar2(13) null,
+   Gender varchar(10) check(Gender in ('Male','Female','Others')),
+   city varchar2(20) not null,
+   state varchar2(20) not null,
+   Aadharno Number(13) null,
+   doa date,
+   padd varchar2(40) not null,
+   cadd varchar2(40) not null,
+   status number(1) not null);
